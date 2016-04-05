@@ -1,0 +1,21 @@
+
+//反序
+digraph G {
+    edge [fontname="FangSong"];
+    node [fontname="FangSong"];
+
+    0[label="图G~的DFS森林",shape=plaintext];
+    node [style=filled,shape=circle,color="black",fillcolor= "lightblue"];
+    1;
+    2;
+    3;
+    4;
+    5;
+    6;
+    
+    
+    1->4;
+    4->3;
+    4->2;
+
+}

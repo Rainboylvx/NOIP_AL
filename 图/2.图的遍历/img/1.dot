@@ -1,0 +1,25 @@
+
+graph G {
+    node [style=filled,shape=circle,color="black",fillcolor= "lightyellow"];
+    rankdir=LR;
+    A;
+    B;
+    C;
+    D;
+    E;
+    F;
+    G;
+    H;
+    I;
+    A--B;
+    A--D;
+    A--C;
+    B--C;
+    C--F;
+    D--F;
+    F--H;
+    H--I;
+    B--E;
+    E--G;
+}
+

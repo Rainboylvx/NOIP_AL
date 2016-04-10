@@ -1,0 +1,23 @@
+digraph G {
+    node [style=filled,shape=circle,color="black",fillcolor= "lightblue"];
+
+    subgraph cluster_1{
+        label ="G2";
+        node [style=filled,shape=circle,color="black",fillcolor= "lightblue"];
+        1;
+        2;
+        3;
+        4;
+        5;
+        1->2;
+
+        2->3;
+
+        3->4;
+        4->3;
+
+        5->4;
+        4->5;
+    }
+
+}

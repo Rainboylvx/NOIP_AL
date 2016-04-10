@@ -1,0 +1,25 @@
+
+graph G {
+    rankdir =LR;
+    node[shape=circle];
+    subgraph cluster_G1{
+        x1[pos="1,300"];
+        x2[pos="1,200"];
+        x3[pos="1,100"];
+    }
+
+    subgraph cluster_G2{
+        y1[pos="100,300"];
+        y2[pos="100,200"];
+        y3[pos="100,100"];
+    }
+
+    
+    x1--y1[color=blue,penwidth=3];
+    x1--y3[color=red,penwidth=3];
+    x2--y1[color=red,penwidth=3];
+    x2--y2[color=blue,penwidth=3];
+    x3--y2[color=red,penwidth=3];
+    
+    {rank=LR;x1;y1};
+}

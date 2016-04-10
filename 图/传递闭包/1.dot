@@ -1,0 +1,16 @@
+
+digraph G {
+    node [style=filled,shape=circle,color="black",fillcolor= "lightyellow"];
+    rankdir=LR;
+
+    1;
+    2;
+    3;
+    4;
+    
+    1->2;
+    2->4;
+    4->3;
+    4->1;
+    {rank=same;1;2}
+}

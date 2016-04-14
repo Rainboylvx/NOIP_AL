@@ -6,6 +6,12 @@
 *© Copyright 2015 Rainboy. All Rights Reserved.
 *=================================*/
 
+
+/* Bellman-Ford算法的思想:
+ *      第一次枚举所有的边,用A点更新B点,最多n-1轮更新即成功
+ *      本质:DP
+ *
+ * */
 #include <cstdio>
 #define maxn 9999
 #define maxe 9999
@@ -35,11 +41,12 @@ int main()
     //进行bellman-ford
     for(i=1;i<=num_node-1;i++)
         for(j=1;j<=num_e;j++){
-            if(dis[E[j].u] > dis[E[j].v] + E[j].lang)
-                dis[E[j].u] = dis[E[j].v] + E[j].lang;
+            int &x = E[j].u,&y=E[j].v,&len = u[j].lang;
+            if(dis[x] > dis[y] + len)
+                dis[x] = dis[y] + len;
 
-            if(dis[E[j].v] > dis[E[j].u] + E[j].lang)
-                dis[E[j].v] = dis[E[j].u] + E[j].lang;
+            if(dis[y] > dis[x] + len)
+                dis[y] = dis[x] + len;
         }
     //代码完成
     for(i=1;i<=num_e;i++){

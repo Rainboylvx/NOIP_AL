@@ -1,0 +1,328 @@
+/* http://prismjs.com/download.html?themes=prism-coy&languages=markup+css+clike+javascript+c+cpp&plugins=line-highlight+line-numbers+highlight-keywords */
+/**
+ * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics) !important;
+ * @author Tim  Shedor
+ */
+
+@import url(http://fonts.useso.com/css?family=Ubuntu+Mono);
+
+code,
+pre{
+	color: black !important;
+	background: none !important;
+	font-family: 'Ubuntu Mono' !important;
+	text-align: left !important;
+	white-space: pre !important;
+	word-spacing: normal !important;
+	word-break: normal !important;
+	word-wrap: normal !important;
+	line-height: 1.5 !important;
+	font-size:21px !important;
+
+	-moz-tab-size: 4 !important;
+	-o-tab-size: 4 !important;
+	tab-size: 4 !important;
+
+	-webkit-hyphens: none !important;
+	-moz-hyphens: none !important;
+	-ms-hyphens: none !important;
+	hyphens: none !important;
+}
+
+/* Code blocks */
+pre{
+	position: relative !important;
+	margin: .5em 0 !important;
+	-webkit-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf !important;
+	-moz-box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf !important;
+	box-shadow: -1px 0px 0px 0px #358ccb, 0px 0px 0px 1px #dfdfdf !important;
+	border-left: 10px solid #358ccb !important;
+	background-color: #fdfdfd !important;
+	background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%) !important;
+	background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%) !important;
+	background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%) !important;
+	background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%) !important;
+	background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%) !important;
+	background-size: 3em 3em !important;
+	background-origin: content-box !important;
+	overflow: visible !important;
+	padding: 0 !important;
+}
+
+code{
+	max-height: inherit !important;
+	height: 100% !important;
+	padding: 0 1em !important;
+	display: block !important;
+	overflow: auto !important;
+}
+
+/* Margin bottom to accomodate shadow */
+:not(pre) > code,
+pre {
+	background-color: #fdfdfd !important;
+	-webkit-box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+	margin-bottom: 1em !important;
+}
+
+/* Inline code */
+:not(pre) > code {
+	position: relative !important;
+	padding: .2em !important;
+	-webkit-border-radius: 0.3em !important;
+	-moz-border-radius: 0.3em !important;
+	-ms-border-radius: 0.3em !important;
+	-o-border-radius: 0.3em !important;
+	border-radius: 0.3em !important;
+	color: #c92c2c !important;
+	border: 1px solid rgba(0, 0, 0, 0.1) !important;
+	display: inline !important;
+	white-space: normal !important;
+}
+
+pre:before,
+pre:after {
+	content: '' !important;
+	z-index: -2 !important;
+	display: block !important;
+	position: absolute !important;
+	bottom: 0.75em !important;
+	left: 0.18em !important;
+	width: 40% !important;
+	height: 20% !important;
+	max-height: 13em !important;
+	-webkit-box-shadow: 0px 13px 8px #979797 !important;
+	-moz-box-shadow: 0px 13px 8px #979797 !important;
+	box-shadow: 0px 13px 8px #979797 !important;
+	-webkit-transform: rotate(-2deg) !important;
+	-moz-transform: rotate(-2deg) !important;
+	-ms-transform: rotate(-2deg) !important;
+	-o-transform: rotate(-2deg) !important;
+	transform: rotate(-2deg) !important;
+}
+
+:not(pre) > code:after,
+pre:after {
+	right: 0.75em !important;
+	left: auto !important;
+	-webkit-transform: rotate(2deg) !important;
+	-moz-transform: rotate(2deg) !important;
+	-ms-transform: rotate(2deg) !important;
+	-o-transform: rotate(2deg) !important;
+	transform: rotate(2deg) !important;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #7D8B99 !important;
+}
+
+.token.punctuation {
+	color: #5F6364 !important;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #c92c2c !important;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted {
+	color: #2f9c0a !important;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+	color: #a67f59 !important;
+	background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+	color: #1990b8 !important;
+}
+
+.token.regex,
+.token.important {
+	color: #e90 !important;
+}
+
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59 !important;
+	background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.token.important {
+	font-weight: normal !important;
+}
+
+.token.bold {
+	font-weight: bold !important;
+}
+.token.italic {
+	font-style: italic !important;
+}
+
+.token.entity {
+	cursor: help !important;
+}
+
+.namespace {
+	opacity: .7 !important;
+}
+
+@media screen and (max-width: 767px) {
+	pre:before,
+	pre:after {
+		bottom: 14px !important;
+		-webkit-box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		box-shadow: none !important;
+	}
+
+}
+
+/* Plugin styles */
+.token.tab:not(:empty):before,
+.token.cr:before,
+.token.lf:before {
+	color: #e0d7d1 !important;
+}
+
+/* Plugin styles: Line Numbers */
+pre.line-numbers {
+	padding-left: 0 !important;
+}
+
+pre.line-numbers code {
+	padding-left: 3.8em !important;
+}
+
+pre.line-numbers .line-numbers-rows {
+	left: 0 !important;
+}
+
+/* Plugin styles: Line Highlight */
+pre[data-line] {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	padding-left: 0 !important;
+}
+pre[data-line] code {
+	position: relative !important;
+	padding-left: 4em !important;
+}
+pre .line-highlight {
+	margin-top: 0 !important;
+}
+
+pre[data-line] {
+	position: relative !important;
+	padding: 1em 0 1em 3em !important;
+}
+
+.line-highlight {
+	position: absolute !important;
+	left: 0 !important;
+	right: 0 !important;
+	padding: inherit 0 !important;
+	margin-top: 1em !important; /* Same as .prism’s padding-top */
+
+	background: hsla(24, 20%, 50%,.08) !important;
+	background: -moz-linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0)) !important;
+	background: -webkit-linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0)) !important;
+	background: -o-linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0)) !important;
+	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0)) !important;
+
+	pointer-events: none !important;
+
+	line-height: inherit !important;
+	white-space: pre !important;
+}
+
+	.line-highlight:before,
+	.line-highlight[data-end]:after {
+		content: attr(data-start) !important;
+		position: absolute !important;
+		top: .4em !important;
+		left: .6em !important;
+		min-width: 1em !important;
+		padding: 0 .5em !important;
+		background-color: hsla(24, 20%, 50%,.4) !important;
+		color: hsl(24, 20%, 95%) !important;
+		font: bold 65%/1.5 sans-serif !important;
+		text-align: center !important;
+		vertical-align: .3em !important;
+		border-radius: 999px !important;
+		text-shadow: none !important;
+		box-shadow: 0 1px white !important;
+	}
+
+	.line-highlight[data-end]:after {
+		content: attr(data-end) !important;
+		top: auto !important;
+		bottom: .4em !important;
+	}
+
+pre.line-numbers {
+	position: relative !important;
+	padding-left: 3.8em !important;
+	counter-reset: linenumber !important;
+}
+
+pre.line-numbers > code {
+	position: relative !important;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute !important;
+	pointer-events: none !important;
+	top: 0 !important;
+	font-size: 100% !important;
+	left: -3.8em !important;
+	width: 3em !important; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px !important;
+	border-right: 1px solid #999 !important;
+
+	-webkit-user-select: none !important;
+	-moz-user-select: none !important;
+	-ms-user-select: none !important;
+	user-select: none !important;
+
+}
+
+	.line-numbers-rows > span {
+		pointer-events: none !important;
+		display: block !important;
+		counter-increment: linenumber !important;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber) !important;
+			color: #999 !important;
+			display: block !important;
+			padding-right: 0.8em !important;
+			text-align: right !important;
+		}

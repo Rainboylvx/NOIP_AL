@@ -1,0 +1,2332 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>最大流 | </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-anchors/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-prism/prism.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../MiniBook/index.html" />
+    
+    
+    <link rel="prev" href="../网络流/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="15.1"
+        data-chapter-title="最大流"
+        data-filepath="网络流/最大流.md"
+        data-basepath=".."
+        data-revision="Tue May 17 2016 20:30:38 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="介绍/index.html">
+            
+                
+                    <a href="../介绍/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="基本算法/index.html">
+            
+                
+                    <a href="../基本算法/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        基本算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="排序算法/index.html">
+            
+                
+                    <a href="../排序算法/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        排序算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="排序算法/冒泡排序.html">
+            
+                
+                    <a href="../排序算法/冒泡排序.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        冒泡排序
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="排序算法/冒泡排序求逆序对.html">
+            
+                
+                    <a href="../排序算法/冒泡排序求逆序对.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.1.</b>
+                        
+                        冒泡排序求逆序对
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="排序算法/归并排序.html">
+            
+                
+                    <a href="../排序算法/归并排序.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        归并排序
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="排序算法/归并排序求逆序对.html">
+            
+                
+                    <a href="../排序算法/归并排序求逆序对.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.1.</b>
+                        
+                        归并排序求逆序对
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="排序算法/快速排序.html">
+            
+                
+                    <a href="../排序算法/快速排序.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        快速排序
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="排序算法/明明的随机数.html">
+            
+                
+                    <a href="../排序算法/明明的随机数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.1.</b>
+                        
+                        明明的随机数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="排序算法/找第k小的数.html">
+            
+                
+                    <a href="../排序算法/找第k小的数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.2.</b>
+                        
+                        找第k小的数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="排序算法/NOIP2007奖学金.html">
+            
+                
+                    <a href="../排序算法/NOIP2007奖学金.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.3.</b>
+                        
+                        NOIP2007奖学金
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="排序算法/NOIP2007统计数字.html">
+            
+                
+                    <a href="../排序算法/NOIP2007统计数字.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.4.</b>
+                        
+                        NOIP2007统计数字
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="排序函数/列队.html">
+            
+                
+                    <a href="../排序函数/列队.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.5.</b>
+                        
+                        列队
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="排序算法/C++排序函数.html">
+            
+                
+                    <a href="../排序算法/C++排序函数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        C++排序函数
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="贪心算法/index.html">
+            
+                
+                    <a href="../贪心算法/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        贪心算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="贪心算法/方格取数等.html">
+            
+                
+                    <a href="../贪心算法/方格取数等.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        方格取数等
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="贪心算法/删数字.html">
+            
+                
+                    <a href="../贪心算法/删数字.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        删数字
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="贪心算法/排队取水.html">
+            
+                
+                    <a href="../贪心算法/排队取水.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        排队取水
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="贪心算法/均分纸牌.html">
+            
+                
+                    <a href="../贪心算法/均分纸牌.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        均分纸牌
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="贪心算法/纪念品分组.html">
+            
+                
+                    <a href="../贪心算法/纪念品分组.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        纪念品分组
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="递推算法/index.html">
+            
+                
+                    <a href="../递推算法/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        递推算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="递推算法/选择客栈.html">
+            
+                
+                    <a href="../递推算法/选择客栈.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        选择客栈
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="递推算法/2k进制数.html">
+            
+                
+                    <a href="../递推算法/2k进制数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        2k进制数
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="高精度算法/index.html">
+            
+                
+                    <a href="../高精度算法/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        高精度算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="高精度算法/高精加.html">
+            
+                
+                    <a href="../高精度算法/高精加.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        高精加
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="高精度算法/高精减.html">
+            
+                
+                    <a href="../高精度算法/高精减.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        高精减
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="高精度算法/高精乘.html">
+            
+                
+                    <a href="../高精度算法/高精乘.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        高精乘
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="高精度算法/高精除.html">
+            
+                
+                    <a href="../高精度算法/高精除.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        高精除
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="高精度算法/高精类.html">
+            
+                
+                    <a href="../高精度算法/高精类.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        高精类
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="高精度算法/高精幂.html">
+            
+                
+                    <a href="../高精度算法/高精幂.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        高精幂
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="高精度算法/高精分数.html">
+            
+                
+                    <a href="../高精度算法/高精分数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        高精分数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="高精度算法/高精阶乘.html">
+            
+                
+                    <a href="../高精度算法/高精阶乘.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        高精阶乘
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="高精度算法/组合数高精.html">
+            
+                
+                    <a href="../高精度算法/组合数高精.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.</b>
+                        
+                        组合数高精
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="搜索/index.html">
+            
+                
+                    <a href="../搜索/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        搜索
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="搜索/广度优先搜索/index.html">
+            
+                
+                    <a href="../搜索/广度优先搜索/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        广度优先搜索
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="搜索/广度优先搜索/双向广搜.html">
+            
+                
+                    <a href="../搜索/广度优先搜索/双向广搜.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        双向广搜
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="搜索/广度优先搜索/AStar算法.html">
+            
+                
+                    <a href="../搜索/广度优先搜索/AStar算法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        A Star 算法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="搜索/深度优先搜索/index.html">
+            
+                
+                    <a href="../搜索/深度优先搜索/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        深度优先搜索
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="搜索/剪枝/index.html">
+            
+                
+                    <a href="../搜索/剪枝/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        剪枝
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="记忆化搜索/index.html">
+            
+                
+                    <a href="../记忆化搜索/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        记忆化搜索
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.6.1" data-path="记忆化搜索/滑雪问题.html">
+            
+                
+                    <a href="../记忆化搜索/滑雪问题.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.1.</b>
+                        
+                        滑雪问题
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6.2" data-path="记忆化搜索/斗地主.html">
+            
+                
+                    <a href="../记忆化搜索/斗地主.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.2.</b>
+                        
+                        斗地主
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="搜索/迭代加深.html">
+            
+                
+                    <a href="../搜索/迭代加深.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        迭代加深
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="分治/index.html">
+            
+                
+                    <a href="../分治/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        分治
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="动态规划/index.html">
+            
+                
+                    <a href="../动态规划/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        动态规划
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="动态规划/线段DP.html">
+            
+                
+                    <a href="../动态规划/线段DP.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        线段DP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="动态规划/LIS最长不下降子序列.html">
+            
+                
+                    <a href="../动态规划/LIS最长不下降子序列.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.1.</b>
+                        
+                        LIS最长不下降子序列
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="动态规划/LCS最长公共子序列.html">
+            
+                
+                    <a href="../动态规划/LCS最长公共子序列.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.2.</b>
+                        
+                        LCS最长公共子序列
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.2.1" data-path="动态规划/移动服务.html">
+            
+                
+                    <a href="../动态规划/移动服务.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.2.1.</b>
+                        
+                        移动服务
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2.2" data-path="动态规划/多米诺骨牌.html">
+            
+                
+                    <a href="../动态规划/多米诺骨牌.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.2.2.</b>
+                        
+                        多米诺骨牌
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2.3" data-path="动态规划/万神牛的筷子.html">
+            
+                
+                    <a href="../动态规划/万神牛的筷子.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.2.3.</b>
+                        
+                        万神牛的筷子
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2.4" data-path="动态规划/最大子矩阵求和.html">
+            
+                
+                    <a href="../动态规划/最大子矩阵求和.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.2.4.</b>
+                        
+                        最大子矩阵求和
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2.5" data-path="动态规划/任务安排.html">
+            
+                
+                    <a href="../动态规划/任务安排.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.2.5.</b>
+                        
+                        任务安排
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="动态规划/区间DP/index.html">
+            
+                
+                    <a href="../动态规划/区间DP/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        区间DP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.2.1" data-path="动态规划/区间DP/整数划分.html">
+            
+                
+                    <a href="../动态规划/区间DP/整数划分.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.1.</b>
+                        
+                        整数划分
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.2" data-path="动态规划/区间DP/石子合并.html">
+            
+                
+                    <a href="../动态规划/区间DP/石子合并.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.2.</b>
+                        
+                        石子合并
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.3" data-path="动态规划/区间DP/能量项链.html">
+            
+                
+                    <a href="../动态规划/区间DP/能量项链.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.3.</b>
+                        
+                        能量项链
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.4" data-path="动态规划/区间DP/统计单词个数.html">
+            
+                
+                    <a href="../动态规划/区间DP/统计单词个数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.4.</b>
+                        
+                        统计单词个数
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.5" data-path="动态规划/区间DP/炮兵布阵.html">
+            
+                
+                    <a href="../动态规划/区间DP/炮兵布阵.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.5.</b>
+                        
+                        炮兵布阵
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2.6" data-path="动态规划/区间DP/凸多边形划分.html">
+            
+                
+                    <a href="../动态规划/区间DP/凸多边形划分.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.6.</b>
+                        
+                        凸多边形划分
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="动态规划/背包DP/index.html">
+            
+                
+                    <a href="../动态规划/背包DP/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        背包DP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.3.1" data-path="动态规划/背包DP/01背包.html">
+            
+                
+                    <a href="../动态规划/背包DP/01背包.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.1.</b>
+                        
+                        01背包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3.2" data-path="动态规划/背包DP/多重背包.html">
+            
+                
+                    <a href="../动态规划/背包DP/多重背包.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.2.</b>
+                        
+                        多重背包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3.3" data-path="动态规划/背包DP/完全背包.html">
+            
+                
+                    <a href="../动态规划/背包DP/完全背包.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.3.</b>
+                        
+                        完全背包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3.4" data-path="动态规划/背包DP/混合三种背包.html">
+            
+                
+                    <a href="../动态规划/背包DP/混合三种背包.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.4.</b>
+                        
+                        混合三种背包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3.5" data-path="动态规划/背包DP/分组背包.html">
+            
+                
+                    <a href="../动态规划/背包DP/分组背包.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.5.</b>
+                        
+                        分组背包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3.6" data-path="动态规划/背包DP/二维背包.html">
+            
+                
+                    <a href="../动态规划/背包DP/二维背包.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.6.</b>
+                        
+                        二维背包
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="动态规划/树型DP/index.html">
+            
+                
+                    <a href="../动态规划/树型DP/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        树型DP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.4.1" data-path="动态规划/树型DP/NOI2002贪吃的九头龙.html">
+            
+                
+                    <a href="../动态规划/树型DP/NOI2002贪吃的九头龙.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.1.</b>
+                        
+                        NOI2002贪吃的九头龙
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4.2" data-path="动态规划/树型DP/加分二叉树.html">
+            
+                
+                    <a href="../动态规划/树型DP/加分二叉树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.2.</b>
+                        
+                        加分二叉树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4.3" data-path="动态规划/树型DP/观光旅游.html">
+            
+                
+                    <a href="../动态规划/树型DP/观光旅游.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.3.</b>
+                        
+                        观光旅游
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="动态规划/状态压缩/index.html">
+            
+                
+                    <a href="../动态规划/状态压缩/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                        状态压缩
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.5.1" data-path="动态规划/状态压缩/青蛙过河.html">
+            
+                
+                    <a href="../动态规划/状态压缩/青蛙过河.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.1.</b>
+                        
+                        青蛙过河
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5.2" data-path="动态规划/状态压缩/广场铺砖.html">
+            
+                
+                    <a href="../动态规划/状态压缩/广场铺砖.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.2.</b>
+                        
+                        广场铺砖
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="数据结构/index.html">
+            
+                
+                    <a href="../数据结构/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        数据结构
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="数据结构/栈.html">
+            
+                
+                    <a href="../数据结构/栈.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        栈
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="数据结构/括号匹配.html">
+            
+                
+                    <a href="../数据结构/括号匹配.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.1.</b>
+                        
+                        括号匹配
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="数据结构/队列.html">
+            
+                
+                    <a href="../数据结构/队列.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        队列
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="数据结构/并查集.html">
+            
+                
+                    <a href="../数据结构/并查集.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                        并查集
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="数据结构/树状数组.html">
+            
+                
+                    <a href="../数据结构/树状数组.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.4.</b>
+                        
+                        树状数组
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="数据结构/RMQ区间最值.html">
+            
+                
+                    <a href="../数据结构/RMQ区间最值.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.5.</b>
+                        
+                        RMQ区间最值
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="数据结构/堆heap.html">
+            
+                
+                    <a href="../数据结构/堆heap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.6.</b>
+                        
+                        堆heap
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="数据结构/二叉排序树.html">
+            
+                
+                    <a href="../数据结构/二叉排序树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.7.</b>
+                        
+                        二叉排序树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.8" data-path="数据结构/线段树/线段树.html">
+            
+                
+                    <a href="../数据结构/线段树/线段树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.8.</b>
+                        
+                        线段树
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="树/index.html">
+            
+                
+                    <a href="../树/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        树
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="树/二叉树/index.html">
+            
+                
+                    <a href="../树/二叉树/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        二叉树
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="树/二叉树/二叉树定义.html">
+            
+                
+                    <a href="../树/二叉树/二叉树定义.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.1.</b>
+                        
+                        二叉树定义
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="树/二叉树/二叉树存储.html">
+            
+                
+                    <a href="../树/二叉树/二叉树存储.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.2.</b>
+                        
+                        二叉树存储
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.3" data-path="树/二叉树/二叉树遍历.html">
+            
+                
+                    <a href="../树/二叉树/二叉树遍历.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.3.</b>
+                        
+                        二叉树遍历
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="树/LCA最近公共祖先/index.html">
+            
+                
+                    <a href="../树/LCA最近公共祖先/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                        LCA最近公共祖先
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.3" data-path="树/最小生成树.html">
+            
+                
+                    <a href="../树/最小生成树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.3.</b>
+                        
+                        最小生成树
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.4" data-path="树/次最小生成树.html">
+            
+                
+                    <a href="../树/次最小生成树.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.4.</b>
+                        
+                        次最小生成树
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="图/index.html">
+            
+                
+                    <a href="../图/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        图
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1" data-path="图/图的存储/index.html">
+            
+                
+                    <a href="../图/图的存储/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.1.</b>
+                        
+                        图的存储
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1.1" data-path="图/图的存储/边集数组.html">
+            
+                
+                    <a href="../图/图的存储/边集数组.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.1.1.</b>
+                        
+                        边集数组
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.1.2" data-path="图/图的存储/十字向量星.html">
+            
+                
+                    <a href="../图/图的存储/十字向量星.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.1.2.</b>
+                        
+                        十字向量星
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="图/单源最短路径/index.html">
+            
+                
+                    <a href="../图/单源最短路径/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.2.</b>
+                        
+                        单源最短路径
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.2.1" data-path="图/单源最短路径/Dijkstra.html">
+            
+                
+                    <a href="../图/单源最短路径/Dijkstra.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.2.1.</b>
+                        
+                        Dijkstra
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2.2" data-path="图/单源最短路径/Bellman-ford.html">
+            
+                
+                    <a href="../图/单源最短路径/Bellman-ford.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.2.2.</b>
+                        
+                        Bellman-ford
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2.3" data-path="图/单源最短路径/SPFA.html">
+            
+                
+                    <a href="../图/单源最短路径/SPFA.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.2.3.</b>
+                        
+                        SPFA
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2.4" data-path="图/单源最短路径/次最短路径.html">
+            
+                
+                    <a href="../图/单源最短路径/次最短路径.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.2.4.</b>
+                        
+                        次最短路径
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="图/强连通分量/index.html">
+            
+                
+                    <a href="../图/强连通分量/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.3.</b>
+                        
+                        强连通分量
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.3.1" data-path="图/强连通分量/Tarjan.html">
+            
+                
+                    <a href="../图/强连通分量/Tarjan.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.3.1.</b>
+                        
+                        Tarjan
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="图/传递闭包/传递闭包.html">
+            
+                
+                    <a href="../图/传递闭包/传递闭包.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.4.</b>
+                        
+                        传递闭包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.5" data-path="图/二分图匹配/二分图匹配.html">
+            
+                
+                    <a href="../图/二分图匹配/二分图匹配.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.5.</b>
+                        
+                        二分图匹配
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.6" data-path="图/图的割点.html">
+            
+                
+                    <a href="../图/图的割点.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.6.</b>
+                        
+                        图的割点
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.7" data-path="图/图的割边.html">
+            
+                
+                    <a href="../图/图的割边.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.7.</b>
+                        
+                        图的割边
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="数学相关/index.html">
+            
+                
+                    <a href="../数学相关/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        数学相关
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="13.1" data-path="数学相关/秦九韶算法与进制转制.html">
+            
+                
+                    <a href="../数学相关/秦九韶算法与进制转制.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.1.</b>
+                        
+                        秦九韶算法与进制转制
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="数学相关/排列.html">
+            
+                
+                    <a href="../数学相关/排列.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.2.</b>
+                        
+                        排列
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="数学相关/组合.html">
+            
+                
+                    <a href="../数学相关/组合.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.3.</b>
+                        
+                        组合
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="数学相关/快速幂/快速幂.html">
+            
+                
+                    <a href="../数学相关/快速幂/快速幂.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.4.</b>
+                        
+                        快速幂
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.5" data-path="数学相关/容斥原理.html">
+            
+                
+                    <a href="../数学相关/容斥原理.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.5.</b>
+                        
+                        容斥原理
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.6" data-path="数学相关/表达式求值.html">
+            
+                
+                    <a href="../数学相关/表达式求值.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.6.</b>
+                        
+                        表达式求值
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.7" data-path="数学相关/解线性方程组.html">
+            
+                
+                    <a href="../数学相关/解线性方程组.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.7.</b>
+                        
+                        解线性方程组
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.8" data-path="数学相关/分解质因数.html">
+            
+                
+                    <a href="../数学相关/分解质因数.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.8.</b>
+                        
+                        分解质因数
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="其它算法/index.html">
+            
+                
+                    <a href="../其它算法/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        其它算法
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="其它算法/二分查找.html">
+            
+                
+                    <a href="../其它算法/二分查找.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        二分查找
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.2" data-path="其它算法/离散化.html">
+            
+                
+                    <a href="../其它算法/离散化.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.2.</b>
+                        
+                        离散化
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.3" data-path="其它算法/hash.html">
+            
+                
+                    <a href="../其它算法/hash.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.3.</b>
+                        
+                        hash
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.4" data-path="其它算法/KMP算法.html">
+            
+                
+                    <a href="../其它算法/KMP算法.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.4.</b>
+                        
+                        KMP算法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="网络流/index.html">
+            
+                
+                    <a href="../网络流/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        网络流
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="15.1" data-path="网络流/最大流.html">
+            
+                
+                    <a href="../网络流/最大流.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.1.</b>
+                        
+                        最大流
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="MiniBook/index.html">
+            
+                
+                    <a href="../MiniBook/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        MiniBook
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="16.1" data-path="MiniBook/算法模板.html">
+            
+                
+                    <a href="../MiniBook/算法模板.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.1.</b>
+                        
+                        算法模板
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="附录/index.html">
+            
+                
+                    <a href="../附录/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        附录
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="17.1" data-path="附录/对拍.html">
+            
+                
+                    <a href="../附录/对拍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.1.</b>
+                        
+                        对拍
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="17.1.1" data-path="附录/对拍/乱序.html">
+            
+                
+                    <a href="../附录/对拍/乱序.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.1.1.</b>
+                        
+                        乱序
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="17.2" data-path="附录/有用的网址.html">
+            
+                
+                    <a href="../附录/有用的网址.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.2.</b>
+                        
+                        有用的网址
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="18" data-path="引用/index.html">
+            
+                
+                    <a href="../引用/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>18.</b>
+                        
+                        引用
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" ></a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <p style="text-align: center;font-size:35px">&#x6700;&#x5927;&#x6D41;</p>
+
+
+<h2 id="&#x7B97;&#x6CD5;&#x539F;&#x7406;"><a name="&#x7B97;&#x6CD5;&#x539F;&#x7406;" class="plugin-anchor" href="#&#x7B97;&#x6CD5;&#x539F;&#x7406;"><span class="fa fa-link"></span></a>&#x7B97;&#x6CD5;&#x539F;&#x7406;</h2>
+<p>&#x53EF;&#x6539;&#x8FDB;&#x8DEF;&#x7B97;&#x6CD5;&#xFF1A;&#x6BCF;&#x6B21;&#x7528;BFS&#x627E;&#x4E00;&#x6761;&#x53EF;&#x6539;&#x8FDB;&#x8DEF;&#xFF0C;&#x7136;&#x540E;&#x6CBF;&#x7740;&#x8FD9;&#x6761;&#x8DEF;&#x5F84;&#x4FEE;&#x6539;&#x6D41;&#x91CF;&#x503C;&#xFF08;&#x5B9E;&#x9645;&#x4FEE;&#x6539;&#x7684;&#x662F;&#x6B8B;&#x91CF;&#x7F51;&#x7EDC;&#x7684;&#x8FB9;&#x6743;&#xFF09;&#xFF0C;&#x4F7F;&#x5F97;&#x603B;&#x6D41;&#x91CF;&#x53D8;&#x5F97;&#x66F4;&#x5927;&#xFF0C;&#x4FEE;&#x6B63;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#xFF1A;
+   1&#x3001;&#x4E0D;&#x5C5E;&#x4E8E;&#x53EF;&#x6539;&#x8FDB;&#x8DEF;P&#x7684;&#x5F27;&#x4E00;&#x6982;&#x4E0D;&#x53D8;
+   2&#x3001;&#x5BF9;&#x4E8E;&#x53EF;&#x6539;&#x8FDB;&#x8DEF;P&#x4E0A;&#x7684;&#x6240;&#x6709;&#x524D;&#x5411;&#x5F27;&#x52A0;&#x4E0A;a&#xFF0C;&#x540E;&#x5411;&#x5F27;&#x51CF;&#x53BB;a&#xFF0C;&#x8FD9;&#x91CC;a&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x6539;&#x8FDB;&#x91CF;&#x3002;a&#x65E2;&#x8981;&#x5C3D;&#x91CF;&#x5927;&#xFF0C;&#x53C8;&#x8981;&#x4FDD;&#x8BC1;&#x53D8;&#x5316;&#x540E;0&lt;=Fij&lt;=Cij (&#x6EE1;&#x8DB3;&#x5BB9;&#x91CF;&#x9650;&#x5236;&#x548C;&#x5E73;&#x8861;&#x6761;&#x4EF6;) &#x3002;&#x56E0;&#x6B64;a=min(min(C&#x524D;&#x5411;&#x5F27;ij&#xFF0D;F&#x524D;&#x5411;&#x5F27;ij),min(F&#x540E;&#x5411;&#x5F27;ij))&#x3002;
+&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;Vs&#x5230;Vt&#x7684;&#x53EF;&#x6539;&#x8FDB;&#x8DEF;&#xFF0C;&#x7B97;&#x6CD5;&#x505C;&#x6B62;&#xFF0C;&#x6B64;&#x65F6;&#x7684;&#x6D41;&#x5C31;&#x662F;&#x6700;&#x5927;&#x6D41;&#x3002;</p>
+<h2 id="&#x7B97;&#x6CD5;&#x8FC7;&#x7A0B;"><a name="&#x7B97;&#x6CD5;&#x8FC7;&#x7A0B;" class="plugin-anchor" href="#&#x7B97;&#x6CD5;&#x8FC7;&#x7A0B;"><span class="fa fa-link"></span></a>&#x7B97;&#x6CD5;&#x8FC7;&#x7A0B;</h2>
+<p>4 5
+1 2 4 4
+1 3 0 3
+2 3 2 2
+2 4 2 4
+3 4 2 2</p>
+<h2 id="&#x7B80;&#x5355;&#x5B9E;&#x73B0;"><a name="&#x7B80;&#x5355;&#x5B9E;&#x73B0;" class="plugin-anchor" href="#&#x7B80;&#x5355;&#x5B9E;&#x73B0;"><span class="fa fa-link"></span></a>&#x7B80;&#x5355;&#x5B9E;&#x73B0;</h2>
+<p>DFS&#x5BFB;&#x627E;&#x589E;&#x5E7F;&#x8DEF;,&#x76F4;&#x5230;&#x627E;&#x4E0D;&#x5230;&#x4E3A;&#x76F4;</p>
+<h2 id="&#x6807;&#x53F7;&#x6CD5;&#x5BFB;&#x6C42;&#x53EF;&#x6539;&#x8FDB;&#x8DEF;&#xFF08;fordfulkerson&#x7B97;&#x6CD5;&#xFF09;"><a name="&#x6807;&#x53F7;&#x6CD5;&#x5BFB;&#x6C42;&#x53EF;&#x6539;&#x8FDB;&#x8DEF;&#xFF08;fordfulkerson&#x7B97;&#x6CD5;&#xFF09;" class="plugin-anchor" href="#&#x6807;&#x53F7;&#x6CD5;&#x5BFB;&#x6C42;&#x53EF;&#x6539;&#x8FDB;&#x8DEF;&#xFF08;fordfulkerson&#x7B97;&#x6CD5;&#xFF09;"><span class="fa fa-link"></span></a>&#x6807;&#x53F7;&#x6CD5;&#x5BFB;&#x6C42;&#x53EF;&#x6539;&#x8FDB;&#x8DEF;&#xFF08;Ford-Fulkerson&#x7B97;&#x6CD5;&#xFF09;</h2>
+<h2 id="usaco42&#x8349;&#x5730;&#x6392;&#x6C34;drainage-ditches"><a name="usaco42&#x8349;&#x5730;&#x6392;&#x6C34;drainage-ditches" class="plugin-anchor" href="#usaco42&#x8349;&#x5730;&#x6392;&#x6C34;drainage-ditches"><span class="fa fa-link"></span></a>[USACO4.2]&#x8349;&#x5730;&#x6392;&#x6C34;Drainage Ditches</h2>
+<p>DFS &#x5199;&#x6CD5;:-- BFS&#x5199;&#x6CD5;</p>
+<p>&#x5730;&#x5740;:<a href="http://www.luogu.org/problem/show?pid=2740" target="_blank">http://www.luogu.org/problem/show?pid=2740</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../网络流/index.html" class="navigation navigation-prev " aria-label="Previous page: 网络流"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../MiniBook/index.html" class="navigation navigation-next " aria-label="Next page: MiniBook"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-prism/prism.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":"sepia","family":"sans","size":4},"katex":{},"anchors":{},"prism":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"livereload":{}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

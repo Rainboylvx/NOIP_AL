@@ -1,0 +1,281 @@
+/* http://prismjs.com/download.html?themes=prism-twilight&languages=markup+css+clike+bash+c+cpp&plugins=previewer-base */
+/**
+ * prism.js Twilight theme
+ * Based (more or less) on the Twilight theme originally of Textmate fame.
+ * @author Remy Bach
+ */
+@import url(http://fonts.useso.com/css?family=Ubuntu+Mono);
+code[class*="language-"],
+pre[class*="language-"] {
+    font-size:21px !important;
+	color: white !important;
+	background: none !important;
+	font-family: 'Ubuntu Mono' !important;
+	text-align: left !important;
+	text-shadow: 0 -.1em .2em black !important;
+	white-space: pre !important;
+	word-spacing: normal !important;
+	word-break: normal !important;
+	word-wrap: normal !important;
+	line-height: 1.5 !important;
+
+	-moz-tab-size: 4 !important;
+	-o-tab-size: 4 !important;
+	tab-size: 4 !important;
+
+	-webkit-hyphens: none !important;
+	-moz-hyphens: none !important;
+	-ms-hyphens: none !important;
+	hyphens: none !important;
+}
+
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+	background: hsl(0, 0%, 8%) !important; /* #141414 */
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	border-radius: .5em !important;
+	border: .3em solid hsl(0, 0%, 33%) !important; /* #282A2B */
+	box-shadow: 1px 1px .5em black inset !important;
+	margin: .5em 0 !important;
+	overflow: auto !important;
+	padding: 1em !important;
+}
+
+pre[class*="language-"]::-moz-selection {
+	/* Firefox */
+	background: hsl(200, 4%, 16%) !important; /* #282A2B */
+}
+
+pre[class*="language-"]::selection {
+	/* Safari */
+	background: hsl(200, 4%, 16%) !important; /* #282A2B */
+}
+
+/* Text Selection colour */
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none !important;
+	background: hsla(0, 0%, 93%, 0.15) !important; /* #EDEDED */
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none !important;
+	background: hsla(0, 0%, 93%, 0.15) !important; /* #EDEDED */
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	border-radius: .3em !important;
+	border: .13em solid hsl(0, 0%, 33%) !important; /* #545454 */
+	box-shadow: 1px 1px .3em -.1em black inset !important;
+	padding: .15em .2em .05em !important;
+	white-space: normal !important;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: hsl(0, 0%, 47%) !important; /* #777777 */
+}
+
+.token.punctuation {
+	opacity: .7 !important;
+}
+
+.namespace {
+	opacity: .7 !important;
+}
+
+.token.tag,
+.token.boolean,
+.token.number,
+.token.deleted {
+	color: hsl(14, 58%, 55%) !important; /* #CF6A4C */
+}
+
+.token.keyword,
+.token.property,
+.token.selector,
+.token.constant,
+.token.symbol,
+.token.builtin {
+	color: hsl(53, 89%, 79%) !important; /* #F9EE98 */
+}
+
+.token.attr-name,
+.token.attr-value,
+.token.string,
+.token.char,
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable,
+.token.inserted {
+	color: hsl(76, 21%, 52%) !important; /* #8F9D6A */
+}
+
+.token.atrule {
+	color: hsl(218, 22%, 55%) !important; /* #7587A6 */
+}
+
+.token.regex,
+.token.important {
+	color: hsl(42, 75%, 65%) !important; /* #E9C062 */
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold !important;
+}
+.token.italic {
+	font-style: italic !important;
+}
+
+.token.entity {
+	cursor: help !important;
+}
+
+pre[data-line] {
+	padding: 1em 0 1em 3em !important;
+	position: relative !important;
+}
+
+/* Markup */
+.language-markup .token.tag,
+.language-markup .token.attr-name,
+.language-markup .token.punctuation {
+	color: hsl(33, 33%, 52%) !important; /* #AC885B */
+}
+
+/* Make the tokens sit above the line highlight so the colours don't look faded. */
+.token {
+	position: relative !important;
+	z-index: 1 !important;
+}
+
+.line-highlight {
+	background: -moz-linear-gradient(to right, hsla(0, 0%, 33%, .1) 70%, hsla(0, 0%, 33%, 0)) !important; /* #545454 */
+	background: -o-linear-gradient(to right, hsla(0, 0%, 33%, .1) 70%, hsla(0, 0%, 33%, 0)) !important; /* #545454 */
+	background: -webkit-linear-gradient(to right, hsla(0, 0%, 33%, .1) 70%, hsla(0, 0%, 33%, 0)) !important; /* #545454 */
+	background: hsla(0, 0%, 33%, 0.25) !important; /* #545454 */
+	background: linear-gradient(to right, hsla(0, 0%, 33%, .1) 70%, hsla(0, 0%, 33%, 0)) !important; /* #545454 */
+	border-bottom: 1px dashed hsl(0, 0%, 33%) !important; /* #545454 */
+	border-top: 1px dashed hsl(0, 0%, 33%) !important; /* #545454 */
+	left: 0 !important;
+	line-height: inherit !important;
+	margin-top: 0.75em !important; /* Same as .prism’s padding-top */
+	padding: inherit 0 !important;
+	pointer-events: none !important;
+	position: absolute !important;
+	right: 0 !important;
+	white-space: pre !important;
+	z-index: 0 !important;
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+	background-color: hsl(215, 15%, 59%) !important; /* #8794A6 */
+	border-radius: 999px !important;
+	box-shadow: 0 1px white !important;
+	color: hsl(24, 20%, 95%) !important; /* #F5F2F0 */
+	content: attr(data-start) !important;
+	font: bold 65%/1.5 sans-serif !important;
+	left: .6em !important;
+	min-width: 1em !important;
+	padding: 0 .5em !important;
+	position: absolute !important;
+	text-align: center !important;
+	text-shadow: none !important;
+	top: .4em !important;
+	vertical-align: .3em !important;
+}
+
+.line-highlight[data-end]:after {
+	bottom: .4em !important;
+	content: attr(data-end) !important;
+	top: auto !important;
+}
+
+.prism-previewer,
+.prism-previewer:before,
+.prism-previewer:after {
+	position: absolute !important;
+	pointer-events: none !important;
+}
+.prism-previewer,
+.prism-previewer:after {
+	left: 50% !important;
+}
+.prism-previewer {
+	margin-top: -48px !important;
+	width: 32px !important;
+	height: 32px !important;
+	margin-left: -16px !important;
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity)" !important;
+	filter: alpha(opacity=0) !important;
+	-khtml-opacity: 0 !important;
+	-moz-opacity: 0 !important;
+	opacity: 0 !important;
+	-webkit-transition: opacity .25s !important;
+	-moz-transition: opacity .25s !important;
+	-o-transition: opacity .25s !important;
+	transition: opacity .25s !important;
+}
+.prism-previewer.flipped {
+	margin-top: 0 !important;
+	margin-bottom: -48px !important;
+}
+.prism-previewer:before,
+.prism-previewer:after {
+	content: '' !important;
+	position: absolute !important;
+	pointer-events: none !important;
+}
+.prism-previewer:before {
+	top: -5px !important;
+	right: -5px !important;
+	left: -5px !important;
+	bottom: -5px !important;
+	-webkit-border-radius: 10px !important;
+	-moz-border-radius: 10px !important;
+	border-radius: 10px !important;
+	border: 5px solid #fff !important;
+	-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75) !important;
+	-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75) !important;
+	-ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75) !important;
+	-o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75) !important;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75) !important;
+}
+
+.prism-previewer:after {
+	top: 100% !important;
+	width: 0 !important;
+	height: 0 !important;
+	margin: 5px 0 0 -7px !important;
+	border: 7px solid transparent !important;
+	border-color: rgba(255, 0, 0, 0) !important;
+	border-top-color: #fff !important;
+}
+.prism-previewer.flipped:after {
+	top: auto !important;
+	bottom: 100% !important;
+	margin-top: 0 !important;
+	margin-bottom: 5px !important;
+	border-top-color: rgba(255, 0, 0, 0) !important;
+	border-bottom-color: #fff !important;
+}
+.prism-previewer.active {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity)" !important;
+	filter: alpha(opacity=1) !important;
+	-khtml-opacity: 1 !important;
+	-moz-opacity: 1 !important;
+	opacity: 1 !important;
+}
